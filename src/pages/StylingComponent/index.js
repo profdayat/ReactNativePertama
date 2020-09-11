@@ -1,10 +1,9 @@
-/* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
-import lenovo from './lenovo.jpg';
+import lenovo from '../../assets/images/lenovo.jpg';
 
-const StylingReactNativeComponent = () => {
+const StylingComponent = () => {
   return (
     <View>
       <Text style={styles.text}>Styling Component</Text>
@@ -77,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default StylingReactNativeComponent;
+export default StylingComponent;
