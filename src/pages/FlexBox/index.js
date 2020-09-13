@@ -3,7 +3,33 @@ import React, {Component} from 'react';
 import {Text, View, Image} from 'react-native';
 
 class FlexBox extends Component {
+  constructor(props) {
+    super(props);
+    console.log('==> constructor');
+    this.state = {
+      subscriber: 200,
+    };
+  }
+
+  componentDidMount() {
+    console.log('==> component did mount');
+    setTimeout(() => {
+      this.setState({
+        subscriber: 400,
+      });
+    }, 4000);
+  }
+
+  componentDidUpdate() {
+    console.log('==> component did update');
+  }
+
+  componentWillUnmount() {
+    console.log('==> component will unmount');
+  }
+
   render() {
+    console.log('==> render');
     return (
       <View>
         <View
@@ -37,7 +63,7 @@ class FlexBox extends Component {
           />
           <View>
             <Text style={{fontSize: 20, fontWeight: 'bold'}}>Dayat</Text>
-            <Text>100 Subcriber</Text>
+            <Text>{this.state.subscriber} Subcriber</Text>
           </View>
         </View>
       </View>
